@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip_Calculator</title>
+    <link rel="stylesheet" href="./Tip_calc_style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container" id="top_container">
+            <div class="title">Bill Total</div>
+            <div class="ip_container">
+                <span>$</span>
+                <input id="billtotal_ip" onkeyup = "CalcBill()" type="text" placeholder="0.00"/>
+            </div>
+        </div>
+        <div class="container" id="second_container">   
+            <div class="title">Tip</div>
+            <div class="ip_container">
+                <span>%</span>
+                <input id="tip_ip" onkeyup = "CalcBill()" type="text" placeholder="10"/>
+            </div>
+            <div id="tip_suggestions">
+                <button class="suggestion" id="tip_direct_ip" type="submit" value="10">10</button>
+                <button class="suggestion" id="tip_direct_ip" type="submit" value="20">20</button>
+                <button class="suggestion" id="tip_direct_ip" type="submit" value="30" style="background-color: #c2e37b; color: #435334;">30</button>
+                <button class="suggestion" id="tip_direct_ip" type="submit" value="40">40</button>
+                <button class="suggestion" id="tip_direct_ip" type="submit" value="50">50</button>
+            </div>
+        </div>
+        <div class="container" id="bottom_container">
+            <div class="split_container">
+                <div class="title">People</div>
+                <div class="controls">
+                    <button class="splitBtn" onclick="increasePeople()">+</button>
+                    <span class="splitAmount" id="no_of_ppl">1</span>
+                    <button class="splitBtn" onclick="decreasePeople()">-</button>
+                </div>
+            </div>
+            <div class="total_container">
+                <div class="title">Total per Person</div>
+                <div class="total" id="total_per_person">$0.00</div>
+            </div>
+        </div>
+    
+    </div>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat&family=Comfortaa:wght@600&family=Libre+Baskerville&family=Montserrat&family=Noto+Sans:wght@900&family=Nunito&family=Poppins:wght@100;200;300;600&family=Quicksand:wght@500;600&family=Roboto&display=swap" rel="stylesheet">
+
+    <script src="./Tip_calc_js.js"></script>
+    
+</body>
+</html>
